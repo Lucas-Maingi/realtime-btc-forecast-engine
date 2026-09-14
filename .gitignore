@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+
+# Python cache files
+_pycache_/
+*.pyc
+
+# Model weights (too large for GitHub)
+*.pth
+
+# Environment variables / secrets
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
