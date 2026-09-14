@@ -1,11 +1,31 @@
-markdown
+
 
 
 # Real-Time BTC Forecast Engine
 A production-grade machine learning pipeline that connects to Binance's live WebSocket stream, engineers features from raw Bitcoin trade data in real-time, and serves directional price predictions (UP/DOWN) through a FastAPI endpoint — all packaged in Docker.
 ## Architecture
-Binance WebSocket (Live Trades) │ ▼ collector.py ──► Captures raw trade stream via WebSocket │ ▼ features.py ──► Engineers rolling averages, volume & volatility │ ▼ model.py ──► PyTorch binary classifier (price direction) │ ▼ train.py ──► Trains on historical Binance kline data │ ▼ server.py ──► FastAPI serves real-time predictions │ ▼ Dockerfile ──► Containerized for cloud deployment
 
+```
+Binance WebSocket (Live Trades)
+        │
+        ▼
+  collector.py  ──►  Captures raw trade stream via WebSocket
+        │
+        ▼
+  features.py   ──►  Engineers rolling averages, volume & volatility
+        │
+        ▼
+  model.py      ──►  PyTorch binary classifier (price direction)
+        │
+        ▼
+  train.py      ──►  Trains on historical Binance kline data
+        │
+        ▼
+  server.py     ──►  FastAPI serves real-time predictions
+        │
+        ▼
+  Dockerfile    ──►  Containerized for cloud deployment
+```
 
 
 ## Tech Stack
