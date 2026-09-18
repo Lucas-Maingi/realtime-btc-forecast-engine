@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+torch
+pandas
+numpy
+scikit-learn
+joblib
+requests
+websocket-client
